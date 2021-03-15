@@ -2,7 +2,22 @@
 @import "topic";
 @import "topic-list";
 
+// Open-sans please
+*{font-family:Open Sans,sans-serif;}
+@font-face{font-family:Open Sans;font-style:normal;font-weight:600;font-display:swap;src:url(https://content.arduino.cc/fonts/OpenSans-Semibold-webfont.woff) format("woff");}
+@font-face{font-family:Open Sans;font-style:normal;font-weight:400;font-display:swap;src:url(https://content.arduino.cc/fonts/OpenSans-Regular-webfont.woff) format("woff");}
+@font-face{font-family:Open Sans;font-style:normal;font-weight:700;font-display:swap;src:url(https://content.arduino.cc/fonts/OpenSans-Bold-webfont.woff) format("woff");}
+@font-face{font-family:Open Sans;font-style:italic;font-weight:400;font-display:swap;src:url(https://content.arduino.cc/fonts/OpenSans-Italic-webfont.woff) format("woff");}
+@font-face{font-family:Open Sans;font-style:normal;font-weight:400;src:url(https://content.arduino.cc/fonts/OpenSans-Regular-webfont.woff) format("woff");}
+@font-face{font-family:Open Sans;font-style:normal;font-weight:700;src:url(https://content.arduino.cc/fonts/OpenSans-Bold-webfont.woff) format("woff");}
+@font-face{font-family:Open Sans;font-style:italic;font-weight:400;src:url(https://content.arduino.cc/fonts/OpenSans-Italic-webfont.woff) format("woff");}
+@font-face{font-family:Open Sans;font-style:normal;font-weight:600;src:url(https://content.arduino.cc/fonts/OpenSans-Semibold-webfont.woff) format("woff");}
+
 // General
+#main {
+  min-height: calc(100vh - 110px);
+}
+
 .btn {
   border-radius: 2rem;
 }
@@ -12,15 +27,19 @@ p {
 }
 
 // Header
+// Discourse Stuff - to be hidden?
+.d-header-wrap{
+  z-index: 10 !important;
+}
 .d-header {
   #site-logo {
-    max-height: 2em;
     max-width: 100%;
     filter: invert(get_invert($logo-invert-colors))
       hue-rotate(#{$logo-hue-rotation}deg)
       brightness(calc((#{$logo-brightness} / 10) + 1));
   }
 }
+
 
 .nav-pills {
   & > li {

@@ -1,0 +1,24 @@
+<div id="footer"></div>
+<script type="text/javascript">
+  // We need a lot of variables from Discourse
+  window.auth = new arduinoHF.CustomAuth({
+    no_auth: true,
+  });
+
+  window.arduinoHeader = new window.arduinoHF.Header(
+    document.getElementById("header"),
+    window.auth,
+    {
+      env: "prod",
+      style: "arduino",
+    }
+  );
+
+  window.arduinoFooter = new window.arduinoHF.Footer(
+    document.getElementById("footer"),
+    window.auth,
+    {
+      env: "prod",
+    }
+  );
+</script>
